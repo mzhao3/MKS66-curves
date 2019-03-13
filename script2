@@ -1,0 +1,25 @@
+bezier
+30 100 0 100 0 0 30 0
+bezier
+50 100 50 120 110 120 110 100
+bezier
+160 100 160 120 220 120 220 100
+bezier
+240 100 260 100 260 0 240 0
+bezier
+100 20 100 0 160 0 160 20
+circle
+65 96 0 10
+circle
+175 96 0 10
+bezier
+130 30 160 30 160 50 140 50
+line
+130 50 0 130 80 0
+ident
+move
+150 200 0
+apply
+display
+save
+pic.png
