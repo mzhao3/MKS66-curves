@@ -3,24 +3,24 @@ from matrix import *
 
 
 def add_circle( points, cx, cy, cz, r, step ):
-    t = 2 * math.pi / step
-    a = 1
-    while (a <= step):
-        x0 = cx + r * math.cos(t * a)
-        y0 = cy + r * math.sin(t * a)
-
-        x1 = cx + r * math.cos(t * (a+1))
-        y1 = cy + r * math.sin(t * (a+1))
+    t = 0
+    step = step * 2 * math.pi
+    while (t <= 2 * math.pi):
+        x0 = cx + r * math.cos(t)
+        y0 = cy + r * math.sin(t)
+        t += step
+        x1 = cx + r * math.cos(t)
+        y1 = cy + r * math.sin(t)
 
         add_edge(points, x0, y0, cz, x1, y1, cz)
-        a+=1
+
 
 
 
 def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
     cx = generate_curve_coefs(x0, x1, x2, x3, curve_type)
     cy = generate_curve_coefs(y0, y1, y2, y3, curve_type)
-    t = 1.0/step
+    t = step
     a = 0.0
     while a < 1:
         #print(a)
